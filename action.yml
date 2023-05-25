@@ -4,9 +4,6 @@ description: 'Checkout source for jobs triggered by Commit Queue'
 runs:
   using: "composite"
   steps:
-      - name: ${{github.event.inputs.id}}
-        shell: bash
-        run: echo run identifier ${{ inputs.id }}
       - name: Checkout Source
         uses: actions/checkout@v3.5.2
         with:
